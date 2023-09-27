@@ -1,0 +1,68 @@
+﻿﻿<div class="card mb-3 login-form">
+    <div class="card-body">
+        @if (Context.Request.Query.ContainsKey("errorMessage"))
+        {
+            <div class="alert alert-danger">@Context.Request.Query["errorMessage"]</div>
+        }
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <form method="post">
+                        @Html.AntiForgeryToken()
+
+                        <div class="mb-3">
+                            <label for="fname" class="form-label">FirstName</label>
+                            <input type="text" class="form-control" id="fname" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="lname">LastName</label>
+                            <input type="text" class="form-control"  for="lname"required>
+                        </div>
+
+                        <div  class="mb-3">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="text" class="form-control" id="email" required>
+                        </div>
+
+                        <div class="mb-3" >
+                            <label class="form-label" for="usertype">UserType</label>
+                            <input type="text" class="form-control"id="usertype"required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label  class="form-label" for="pass">Password</label>
+                            <input type="password" class="form-control" id="pass"required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="phone">phone</label>
+                            <input type="text" class="form-control" id="phone"required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="gender">Gender</label>
+                            <input type="text" class="form-control" id="gender"required>
+                        </div>
+
+                        <input type="checkbox" id="myCheckbox1">
+                        <label for="myCheckbox1">is smoker</label>
+
+                        <input type="checkbox" id="myCheckbox2">
+                        <label for="myCheckbox2">has pets</label>
+
+                        <div class="mb-3">
+                            <label  class="form-label" for="petstype">pets type</label>
+                            <input type="text" class="form-control" id="petstype" required>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

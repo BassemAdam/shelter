@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "TPXHlkXLZ0WHjdiMWr9kfSIJhM0MN/pL8ITc22SR8wi/qMn+RJsh3JPGMuG02hu4bMAoW/pLKc+Gy2fxCDMhsg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SOUQ ALCOMPUMARTS\\source\\repos\\ShelterProjectImp\\ShelterProjectImp\\ShelterProjectImp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SOUQ ALCOMPUMARTS\\.nuget\\packages\\edgedb.net.driver\\1.2.3\\edgedb.net.driver.1.2.3.nupkg.sha512",
+    "C:\\Users\\SOUQ ALCOMPUMARTS\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\SOUQ ALCOMPUMARTS\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\SOUQ ALCOMPUMARTS\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

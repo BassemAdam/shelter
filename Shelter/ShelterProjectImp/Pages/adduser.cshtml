@@ -1,0 +1,19 @@
+﻿@page
+@model adduserModel
+
+@if (User.Identity != null && User.Identity.IsAuthenticated)
+{
+    <div class="text-center">
+        <form method="post" action="/logout">
+            @Html.AntiForgeryToken()
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-danger">Logout</button>
+            </div>
+        </form>
+    </div>
+}
+else
+{
+    @Html.Partial("_LoginForm")
+}
+﻿
