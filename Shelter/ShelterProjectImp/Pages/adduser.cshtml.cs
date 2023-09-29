@@ -26,13 +26,26 @@ public class adduserModel : PageModel
 
     public async Task<IActionResult> OnPost()
     {
-        
-        var query = "INSERT User {{first_name := <str>$first_name, last_name := <str>$last_name, email := <str>$email, user_type := <str>$user_type, phone := <str>$phone, password := <str>$password, gender := <str>$gender}, is_smoker := <bool>$is_smoker}, has_pets := <bool>$has_pets}, pets_type := <str>$pets_type}};";
 
-        /*await _client.ExecuteAsync(query, new Dictionary<string, object?>
+        var query = """
+                    INSERT User {
+                        first_name := <str>$first_name, 
+                        last_name := <str>$last_name, 
+                        email := <str>$email, 
+                        user_type := <str>$user_type, 
+                        phone := <str>$phone, 
+                        password := <str>$password,
+                        gender := <str>$gender, 
+                        is_smoker := <bool>$is_smoker, 
+                        has_pets := <bool>$has_pets, 
+                        pets_type := <str>$pets_type
+                    };
+                    """;
+        
+        await _client.ExecuteAsync(query, new Dictionary<string, object?>
         {
 
-            {"first_name", NewUser.FirstName},
+            {"first_name", "ahmed"},
             {"last_name", NewUser.LastName},
             {"email", NewUser.Email},
             {"user_type", NewUser.UserType},
@@ -42,9 +55,8 @@ public class adduserModel : PageModel
             {"is_smoker", NewUser.IsSmoker},
             {"has_pets", NewUser.HasPets},
             {"pets_type", NewUser.PetsType}
-        });*/
-        //await _client.ExecuteAsync(query, new { first_name = NewUser.FirstName, last_name = NewUser.LastName, email= NewUser.Email, user_type= NewUser.UserType, phone = NewUser.Phone , password = NewUser.Password, gender = NewUser.Gender, is_smoker= NewUser.IsSmoker,has_pets= NewUser.HasPets,pets_type= NewUser.PetsType });
-        await _client.ExecuteAsync($"INSERT User {{ email := '{NewUser.Email}', first_name := r'{NewUser.FirstName}', last_name := r'{NewUser.LastName}', gender := r'{NewUser.Gender}', phone := r'{NewUser.Phone}', password := r'{NewUser.Password}', has_pets := {NewUser.HasPets}, is_smoker := {NewUser.IsSmoker}, pets_type := r'{NewUser.PetsType}', user_type := r'{NewUser.UserType}' }};");
+        });
+      
         return Page();
     }
 }

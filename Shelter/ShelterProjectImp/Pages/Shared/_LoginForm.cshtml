@@ -1,4 +1,6 @@
-﻿﻿<div class="card mb-3 login-form">
+﻿﻿
+@model User
+<div class="card mb-3 login-form">
     <div class="card-body">
         @if (Context.Request.Query.ContainsKey("errorMessage"))
         {
@@ -11,49 +13,49 @@
                         @Html.AntiForgeryToken()
 
                         <div class="mb-3">
-                            <label for="fname" class="form-label">FirstName</label>
-                            <input type="text" class="form-control" id="fname" required>
+                            <label for="fname" class="form-label" >FirstName</label>
+                            <input type="text" class="form-control" id="fname" asp-for="FirstName" required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label" for="lname">LastName</label>
-                            <input type="text" class="form-control"  for="lname"required>
+                            <input type="text" class="form-control" asp-for="LastName" for="lname"required>
                         </div>
 
                         <div  class="mb-3">
                             <label class="form-label" for="email">Email</label>
-                            <input type="text" class="form-control" id="email" required>
+                            <input type="text" class="form-control" asp-for="Email" id="email" required>
                         </div>
 
                         <div class="mb-3" >
                             <label class="form-label" for="usertype">UserType</label>
-                            <input type="text" class="form-control"id="usertype"required>
+                            <input type="text" class="form-control"asp-for="UserType" id="usertype"required>
                         </div>
 
                         <div class="mb-3">
                             <label  class="form-label" for="pass">Password</label>
-                            <input type="password" class="form-control" id="pass"required>
+                            <input type="password" class="form-control" asp-for="Password" id="pass"required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label" for="phone">phone</label>
-                            <input type="text" class="form-control" id="phone"required>
+                            <input type="text" class="form-control"asp-for="Phone" id="phone"required>
                         </div>
 
                         <div class="mb-3">
                             <label class="form-label" for="gender">Gender</label>
-                            <input type="text" class="form-control" id="gender"required>
+                            <input type="text" class="form-control" asp-for="Gender" id="gender"required>
                         </div>
 
                         <input type="checkbox" id="myCheckbox1">
-                        <label for="myCheckbox1">is smoker</label>
+                        <label for="myCheckbox1" asp-for="IsSmoker">is smoker</label>
 
                         <input type="checkbox" id="myCheckbox2">
-                        <label for="myCheckbox2">has pets</label>
+                        <label for="myCheckbox2" asp-for="HasPets">has pets</label>
 
                         <div class="mb-3">
                             <label  class="form-label" for="petstype">pets type</label>
-                            <input type="text" class="form-control" id="petstype" required>
+                            <input type="text" class="form-control" asp-for="PetsType" id="petstype" required>
                         </div>
 
                         <div class="text-center">
